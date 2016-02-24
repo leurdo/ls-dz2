@@ -1,0 +1,39 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin hide-text{
+    overflow:hidden;
+    text-indent:-9000px;
+    display:block;
+}
+
+@mixin white-ribbon() {
+    background-color: #fff;
+    box-shadow: 0 2px #ebeef0;
+    width: 100%;
+    min-width: $siteWidth;
+}
+
+@mixin grey-border() {
+    border-radius: 3px;
+    border: solid 1px #dee2e5;
+}
+
+@mixin orange-button() {
+    border-radius: 0 3px 3px 0;
+    background-color: #f60;
+    background-image: linear-gradient(56deg, #f60, #ff6f2d 99%);
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    font-family: open_sanssemibold;
+
+    &:hover {
+        background: darken($orange, 10%);
+    }
+}

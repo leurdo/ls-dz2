@@ -1,0 +1,38 @@
+@import "_layout/icons";
+
+
+.socials__link_vk {
+    @include sprite($vk);
+    @include hide-text;
+
+    &:hover {
+        @include sprite($vk-hover);
+    }
+}
+
+.socials__link_fb {
+    @include sprite($fb);
+    @include hide-text;
+
+    &:hover {
+        @include sprite($fb-hover);
+    }
+}
+
+.socials__link_tw {
+    @include sprite($tw);
+    @include hide-text;
+
+    &:hover {
+        @include sprite($tw-hover);
+    }
+}
+
+
+.icon-address {
+    @include sprite($map);
+}
+
+.icon-tel {
+     @include sprite($tel);
+}

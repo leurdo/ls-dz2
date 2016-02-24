@@ -1,0 +1,48 @@
+header.header
+            .header-top
+                .container
+                    .socials
+                        ul.socials__list
+                            - var socials = ['fb', 'vk', 'tw']
+                            each item in socials
+                                li.socials__item
+                                    a(href="#" class="socials__link socials__link_#{item}") #{item}
+                    .header-top-item
+                        i(class="icon icon-address")
+                        | ул. Маяковская 6, офис 17
+                    .header-top-item
+                        i(class="icon icon-tel")
+                        a(class="header-top-item_tel" href="tel:+79211231213")
+                            | +7 (921) 123-12-13
+
+            .container
+                .header-main
+                    h1.logo
+                       a(href="/")
+                            img(src="images/logo.png", alt="logo")
+                    form(class="search" action="#" method="get")
+                        input(class="search__input" type="search" placeholder="Что будем искать")
+                        button(class="search__submit" type="submit") Найти
+                    ul.top-nav
+                        - var menu = ['Карта проезда', 'История заказов', 'Корзина']
+                        each item in menu
+                            li.top-nav__item
+                                a(href="#" class="top-nav__link") #{item}
+            nav.nav
+                ul.nav-inner.container
+                    -var nav = ['Планшеты', 'Мобильные телефоны', 'Мр3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
+                    each item in nav
+                        li.nav__item
+                        if item == 'Мобильные телефоны'
+                            a(href="#" class="nav__link nav__link_active") #{item}
+                        else
+                            a(href="#" class="nav__link") #{item}
+
+            ul.breadcrumbs.container
+                - var crumbs = ['Главная', 'Каталог']
+                each item, index in crumbs
+                    li.breadcrumbs__item
+                        if index < crumbs.length - 1
+                            a(href="#" class="breadcrumbs__link") #{item}
+                        else 
+                            a(href="#" class="breadcrumbs__link_active") #{item}

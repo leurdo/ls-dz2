@@ -1,0 +1,168 @@
+.header-top {
+    @include white-ribbon();
+    padding: 25px 0;
+
+    &-item {
+        float: right;
+        margin-left: 80px;
+        line-height: 24px;
+
+        &_tel {
+            font-family: open_sanssemibold;
+            font-size: 18px;
+        }
+    }
+}
+
+.socials {
+    float: left;
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 15px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 5px;
+}
+
+.header-main {
+    padding: 30px 0;
+    display: table;
+    width: 100%;
+}
+
+.logo {
+    display: table-cell;
+    vertical-align: middle;
+    width: 1%;
+    font-size: 0;
+}
+
+.search {
+    font-size: 0px;
+    margin: 3px 0;
+    padding: 0 60px;
+    position: relative;
+
+    &__input {
+        padding: 6px 75px 6px 20px;
+        font-family: open_sanslight;
+        @include grey-border();
+        border-radius: 3px 0 0 3px;
+        font-size: 14px;
+        vertical-align: top;
+        width: 100%;
+    }
+
+    &__submit {
+        @include orange-button();
+        border-radius: 0 3px 3px 0;
+        padding: 7px 15px;
+        font-size: 14px;
+        vertical-align: top;
+        position: absolute;
+        right: 60px;
+
+    }
+}
+
+.top-nav {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 8px 0;
+    text-align: right;
+    width: 1%;
+    white-space: nowrap;
+
+    &__item {
+        margin-left: 35px;
+        display: inline;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-family: open_sanssemibold;
+        font-size: 16px;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.nav {
+    @include white-ribbon();
+    display: block;
+    
+    &-inner {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0;
+    }
+
+    &__item {
+        display: inline;
+        text-align: center;
+    }
+
+    &__link {
+        padding: 20px 13px;
+        font-size: 16px;
+
+        &:hover {
+            background: $grey;
+        }
+
+        &_active {
+            background: $orange;
+            color: #fff;
+            font-family: open_sanssemibold;
+
+            &:hover {
+            background: $orange;
+        }
+        }
+    }
+}
+
+.breadcrumbs {
+    margin-top: 30px;
+
+    &__item {
+        display: inline;
+
+        &:after {
+            content: " >";
+        }
+
+        &:last-child:after {
+            content: "";
+        }
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    &__link_active {
+        color: $orange;
+        text-decoration: underline;
+    }
+}

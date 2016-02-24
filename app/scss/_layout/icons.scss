@@ -1,0 +1,375 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$arrow-down-name: 'arrow-down';
+$arrow-down-x: 0px;
+$arrow-down-y: 87px;
+$arrow-down-offset-x: 0px;
+$arrow-down-offset-y: -87px;
+$arrow-down-width: 18px;
+$arrow-down-height: 11px;
+$arrow-down-total-width: 111px;
+$arrow-down-total-height: 98px;
+$arrow-down-image: '../images/icons.png';
+$arrow-down: (0px, 87px, 0px, -87px, 18px, 11px, 111px, 98px, '../images/icons.png', 'arrow-down', );
+$arrow-name: 'arrow';
+$arrow-x: 18px;
+$arrow-y: 87px;
+$arrow-offset-x: -18px;
+$arrow-offset-y: -87px;
+$arrow-width: 18px;
+$arrow-height: 11px;
+$arrow-total-width: 111px;
+$arrow-total-height: 98px;
+$arrow-image: '../images/icons.png';
+$arrow: (18px, 87px, -18px, -87px, 18px, 11px, 111px, 98px, '../images/icons.png', 'arrow', );
+$checkbox-active-name: 'checkbox-active';
+$checkbox-active-x: 0px;
+$checkbox-active-y: 52px;
+$checkbox-active-offset-x: 0px;
+$checkbox-active-offset-y: -52px;
+$checkbox-active-width: 19px;
+$checkbox-active-height: 19px;
+$checkbox-active-total-width: 111px;
+$checkbox-active-total-height: 98px;
+$checkbox-active-image: '../images/icons.png';
+$checkbox-active: (0px, 52px, 0px, -52px, 19px, 19px, 111px, 98px, '../images/icons.png', 'checkbox-active', );
+$checkbox-hover-name: 'checkbox-hover';
+$checkbox-hover-x: 19px;
+$checkbox-hover-y: 52px;
+$checkbox-hover-offset-x: -19px;
+$checkbox-hover-offset-y: -52px;
+$checkbox-hover-width: 19px;
+$checkbox-hover-height: 19px;
+$checkbox-hover-total-width: 111px;
+$checkbox-hover-total-height: 98px;
+$checkbox-hover-image: '../images/icons.png';
+$checkbox-hover: (19px, 52px, -19px, -52px, 19px, 19px, 111px, 98px, '../images/icons.png', 'checkbox-hover', );
+$checkbox-name: 'checkbox';
+$checkbox-x: 38px;
+$checkbox-y: 52px;
+$checkbox-offset-x: -38px;
+$checkbox-offset-y: -52px;
+$checkbox-width: 19px;
+$checkbox-height: 19px;
+$checkbox-total-width: 111px;
+$checkbox-total-height: 98px;
+$checkbox-image: '../images/icons.png';
+$checkbox: (38px, 52px, -38px, -52px, 19px, 19px, 111px, 98px, '../images/icons.png', 'checkbox', );
+$fb-hover-name: 'fb-hover';
+$fb-hover-x: 0px;
+$fb-hover-y: 26px;
+$fb-hover-offset-x: 0px;
+$fb-hover-offset-y: -26px;
+$fb-hover-width: 26px;
+$fb-hover-height: 26px;
+$fb-hover-total-width: 111px;
+$fb-hover-total-height: 98px;
+$fb-hover-image: '../images/icons.png';
+$fb-hover: (0px, 26px, 0px, -26px, 26px, 26px, 111px, 98px, '../images/icons.png', 'fb-hover', );
+$fb-name: 'fb';
+$fb-x: 26px;
+$fb-y: 26px;
+$fb-offset-x: -26px;
+$fb-offset-y: -26px;
+$fb-width: 26px;
+$fb-height: 26px;
+$fb-total-width: 111px;
+$fb-total-height: 98px;
+$fb-image: '../images/icons.png';
+$fb: (26px, 26px, -26px, -26px, 26px, 26px, 111px, 98px, '../images/icons.png', 'fb', );
+$full-view-hover-name: 'full-view-hover';
+$full-view-hover-x: 80px;
+$full-view-hover-y: 54px;
+$full-view-hover-offset-x: -80px;
+$full-view-hover-offset-y: -54px;
+$full-view-hover-width: 16px;
+$full-view-hover-height: 16px;
+$full-view-hover-total-width: 111px;
+$full-view-hover-total-height: 98px;
+$full-view-hover-image: '../images/icons.png';
+$full-view-hover: (80px, 54px, -80px, -54px, 16px, 16px, 111px, 98px, '../images/icons.png', 'full-view-hover', );
+$full-view-name: 'full-view';
+$full-view-x: 16px;
+$full-view-y: 71px;
+$full-view-offset-x: -16px;
+$full-view-offset-y: -71px;
+$full-view-width: 16px;
+$full-view-height: 16px;
+$full-view-total-width: 111px;
+$full-view-total-height: 98px;
+$full-view-image: '../images/icons.png';
+$full-view: (16px, 71px, -16px, -71px, 16px, 16px, 111px, 98px, '../images/icons.png', 'full-view', );
+$list-view-hover-name: 'list-view-hover';
+$list-view-hover-x: 32px;
+$list-view-hover-y: 71px;
+$list-view-hover-offset-x: -32px;
+$list-view-hover-offset-y: -71px;
+$list-view-hover-width: 16px;
+$list-view-hover-height: 16px;
+$list-view-hover-total-width: 111px;
+$list-view-hover-total-height: 98px;
+$list-view-hover-image: '../images/icons.png';
+$list-view-hover: (32px, 71px, -32px, -71px, 16px, 16px, 111px, 98px, '../images/icons.png', 'list-view-hover', );
+$list-view-name: 'list-view';
+$list-view-x: 0px;
+$list-view-y: 71px;
+$list-view-offset-x: 0px;
+$list-view-offset-y: -71px;
+$list-view-width: 16px;
+$list-view-height: 16px;
+$list-view-total-width: 111px;
+$list-view-total-height: 98px;
+$list-view-image: '../images/icons.png';
+$list-view: (0px, 71px, 0px, -71px, 16px, 16px, 111px, 98px, '../images/icons.png', 'list-view', );
+$map-name: 'map';
+$map-x: 99px;
+$map-y: 16px;
+$map-offset-x: -99px;
+$map-offset-y: -16px;
+$map-width: 12px;
+$map-height: 16px;
+$map-total-width: 111px;
+$map-total-height: 98px;
+$map-image: '../images/icons.png';
+$map: (99px, 16px, -99px, -16px, 12px, 16px, 111px, 98px, '../images/icons.png', 'map', );
+$marker-name: 'marker';
+$marker-x: 99px;
+$marker-y: 32px;
+$marker-offset-x: -99px;
+$marker-offset-y: -32px;
+$marker-width: 8px;
+$marker-height: 14px;
+$marker-total-width: 111px;
+$marker-total-height: 98px;
+$marker-image: '../images/icons.png';
+$marker: (99px, 32px, -99px, -32px, 8px, 14px, 111px, 98px, '../images/icons.png', 'marker', );
+$radio-active-name: 'radio-active';
+$radio-active-x: 57px;
+$radio-active-y: 52px;
+$radio-active-offset-x: -57px;
+$radio-active-offset-y: -52px;
+$radio-active-width: 19px;
+$radio-active-height: 19px;
+$radio-active-total-width: 111px;
+$radio-active-total-height: 98px;
+$radio-active-image: '../images/icons.png';
+$radio-active: (57px, 52px, -57px, -52px, 19px, 19px, 111px, 98px, '../images/icons.png', 'radio-active', );
+$radio-hover-name: 'radio-hover';
+$radio-hover-x: 80px;
+$radio-hover-y: 19px;
+$radio-hover-offset-x: -80px;
+$radio-hover-offset-y: -19px;
+$radio-hover-width: 19px;
+$radio-hover-height: 19px;
+$radio-hover-total-width: 111px;
+$radio-hover-total-height: 98px;
+$radio-hover-image: '../images/icons.png';
+$radio-hover: (80px, 19px, -80px, -19px, 19px, 19px, 111px, 98px, '../images/icons.png', 'radio-hover', );
+$radio-name: 'radio';
+$radio-x: 80px;
+$radio-y: 0px;
+$radio-offset-x: -80px;
+$radio-offset-y: 0px;
+$radio-width: 19px;
+$radio-height: 19px;
+$radio-total-width: 111px;
+$radio-total-height: 98px;
+$radio-image: '../images/icons.png';
+$radio: (80px, 0px, -80px, 0px, 19px, 19px, 111px, 98px, '../images/icons.png', 'radio', );
+$select-arraow-up-name: 'select-arraow-up';
+$select-arraow-up-x: 49px;
+$select-arraow-up-y: 87px;
+$select-arraow-up-offset-x: -49px;
+$select-arraow-up-offset-y: -87px;
+$select-arraow-up-width: 13px;
+$select-arraow-up-height: 9px;
+$select-arraow-up-total-width: 111px;
+$select-arraow-up-total-height: 98px;
+$select-arraow-up-image: '../images/icons.png';
+$select-arraow-up: (49px, 87px, -49px, -87px, 13px, 9px, 111px, 98px, '../images/icons.png', 'select-arraow-up', );
+$select-arrow-name: 'select-arrow';
+$select-arrow-x: 36px;
+$select-arrow-y: 87px;
+$select-arrow-offset-x: -36px;
+$select-arrow-offset-y: -87px;
+$select-arrow-width: 13px;
+$select-arrow-height: 9px;
+$select-arrow-total-width: 111px;
+$select-arrow-total-height: 98px;
+$select-arrow-image: '../images/icons.png';
+$select-arrow: (36px, 87px, -36px, -87px, 13px, 9px, 111px, 98px, '../images/icons.png', 'select-arrow', );
+$star-empty-name: 'star-empty';
+$star-empty-x: 80px;
+$star-empty-y: 71px;
+$star-empty-offset-x: -80px;
+$star-empty-offset-y: -71px;
+$star-empty-width: 16px;
+$star-empty-height: 15px;
+$star-empty-total-width: 111px;
+$star-empty-total-height: 98px;
+$star-empty-image: '../images/icons.png';
+$star-empty: (80px, 71px, -80px, -71px, 16px, 15px, 111px, 98px, '../images/icons.png', 'star-empty', );
+$star-name: 'star';
+$star-x: 80px;
+$star-y: 38px;
+$star-offset-x: -80px;
+$star-offset-y: -38px;
+$star-width: 16px;
+$star-height: 16px;
+$star-total-width: 111px;
+$star-total-height: 98px;
+$star-image: '../images/icons.png';
+$star: (80px, 38px, -80px, -38px, 16px, 16px, 111px, 98px, '../images/icons.png', 'star', );
+$tel-name: 'tel';
+$tel-x: 99px;
+$tel-y: 0px;
+$tel-offset-x: -99px;
+$tel-offset-y: 0px;
+$tel-width: 12px;
+$tel-height: 16px;
+$tel-total-width: 111px;
+$tel-total-height: 98px;
+$tel-image: '../images/icons.png';
+$tel: (99px, 0px, -99px, 0px, 12px, 16px, 111px, 98px, '../images/icons.png', 'tel', );
+$thumb-view-hover-name: 'thumb-view-hover';
+$thumb-view-hover-x: 64px;
+$thumb-view-hover-y: 71px;
+$thumb-view-hover-offset-x: -64px;
+$thumb-view-hover-offset-y: -71px;
+$thumb-view-hover-width: 16px;
+$thumb-view-hover-height: 16px;
+$thumb-view-hover-total-width: 111px;
+$thumb-view-hover-total-height: 98px;
+$thumb-view-hover-image: '../images/icons.png';
+$thumb-view-hover: (64px, 71px, -64px, -71px, 16px, 16px, 111px, 98px, '../images/icons.png', 'thumb-view-hover', );
+$thumb-view-name: 'thumb-view';
+$thumb-view-x: 48px;
+$thumb-view-y: 71px;
+$thumb-view-offset-x: -48px;
+$thumb-view-offset-y: -71px;
+$thumb-view-width: 16px;
+$thumb-view-height: 16px;
+$thumb-view-total-width: 111px;
+$thumb-view-total-height: 98px;
+$thumb-view-image: '../images/icons.png';
+$thumb-view: (48px, 71px, -48px, -71px, 16px, 16px, 111px, 98px, '../images/icons.png', 'thumb-view', );
+$tw-hover-name: 'tw-hover';
+$tw-hover-x: 54px;
+$tw-hover-y: 26px;
+$tw-hover-offset-x: -54px;
+$tw-hover-offset-y: -26px;
+$tw-hover-width: 26px;
+$tw-hover-height: 26px;
+$tw-hover-total-width: 111px;
+$tw-hover-total-height: 98px;
+$tw-hover-image: '../images/icons.png';
+$tw-hover: (54px, 26px, -54px, -26px, 26px, 26px, 111px, 98px, '../images/icons.png', 'tw-hover', );
+$tw-name: 'tw';
+$tw-x: 54px;
+$tw-y: 0px;
+$tw-offset-x: -54px;
+$tw-offset-y: 0px;
+$tw-width: 26px;
+$tw-height: 26px;
+$tw-total-width: 111px;
+$tw-total-height: 98px;
+$tw-image: '../images/icons.png';
+$tw: (54px, 0px, -54px, 0px, 26px, 26px, 111px, 98px, '../images/icons.png', 'tw', );
+$vk-hover-name: 'vk-hover';
+$vk-hover-x: 27px;
+$vk-hover-y: 0px;
+$vk-hover-offset-x: -27px;
+$vk-hover-offset-y: 0px;
+$vk-hover-width: 27px;
+$vk-hover-height: 26px;
+$vk-hover-total-width: 111px;
+$vk-hover-total-height: 98px;
+$vk-hover-image: '../images/icons.png';
+$vk-hover: (27px, 0px, -27px, 0px, 27px, 26px, 111px, 98px, '../images/icons.png', 'vk-hover', );
+$vk-name: 'vk';
+$vk-x: 0px;
+$vk-y: 0px;
+$vk-offset-x: 0px;
+$vk-offset-y: 0px;
+$vk-width: 27px;
+$vk-height: 26px;
+$vk-total-width: 111px;
+$vk-total-height: 98px;
+$vk-image: '../images/icons.png';
+$vk: (0px, 0px, 0px, 0px, 27px, 26px, 111px, 98px, '../images/icons.png', 'vk', );
+$spritesheet-width: 111px;
+$spritesheet-height: 98px;
+$spritesheet-image: '../images/icons.png';
+$spritesheet-sprites: ($arrow-down, $arrow, $checkbox-active, $checkbox-hover, $checkbox, $fb-hover, $fb, $full-view-hover, $full-view, $list-view-hover, $list-view, $map, $marker, $radio-active, $radio-hover, $radio, $select-arraow-up, $select-arrow, $star-empty, $star, $tel, $thumb-view-hover, $thumb-view, $tw-hover, $tw, $vk-hover, $vk, );
+$spritesheet: (111px, 98px, '../images/icons.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

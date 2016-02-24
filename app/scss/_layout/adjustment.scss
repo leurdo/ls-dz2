@@ -1,0 +1,106 @@
+//Variables
+
+$maincol: #303030;
+$footerHeight: 220px;
+$siteWidth: 1100px;
+$orange: #ff6600;
+$grey: #e5e3e3;
+$lightGrey: #dee2e5;
+
+//Fonts
+
+$fonts: (
+    'open_sanslight': opensans-light, 
+    'open_sansregular': opensans-regular,
+    'open_sanssemibold': opensans-semibold,
+    'open_sansbold': opensans-bold
+    );
+
+@each $fontName, $FontFile in $fonts {
+    @font-face {
+        font-family: $fontName; 
+        src: url('../fonts/#{$FontFile}.eot');
+        src: url('../fonts/#{$FontFile}.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/#{$FontFile}.woff2') format('woff2'),
+             url('../fonts/#{$FontFile}.woff') format('woff'),
+             url('../fonts/#{$FontFile}.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+
+
+// General styles
+* {
+    box-sizing: border-box;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4;
+    font-family: open_sansregular, sans-serif;
+    font-size: 14px;
+    color: $maincol;
+}
+
+a {
+    text-decoration: none;
+    color: $maincol;
+}
+
+a:hover, a:focus, a:visited, input:focus, textarea:focus, button:focus, span:focus {
+    outline: none;
+}
+
+strong, b {
+    font-family: open_sanssemibold, sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+h1,h2,h3 {margin: 0}
+
+button {
+    cursor: pointer;
+}
+
+//Stick footer to bottom
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -$footerHeight; 
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer, .wrapper:after {
+  height: $footerHeight; 
+}
+
+//Common elements
+
+.container {
+    width: $siteWidth;
+    margin: 0 auto;
+    @extend %clearfix;
+}

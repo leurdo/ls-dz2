@@ -1,0 +1,40 @@
+include head.jade
+body
+    .wrapper
+        include header.jade
+
+        main.main.container
+            h2.page-title Мобильные телефоны
+            include sidebar.jade
+
+            .content
+                .cont-head
+                    .sorting 
+                        .sorting__title Сортировать по
+                        select(class="sorting__select")
+                            option(value="price") по цене
+                            option(value="popularity") по популярности
+                    .select-view
+                        .select-view__title Вид каталога
+                        ul.view
+                            -var view = ['full-view', 'thumb-view', 'list-view']
+                            each item in view
+                                if item == 'full-view'
+                                    li(id="#{item}").view__item.active
+                                else
+                                    li(id="#{item}").view__item
+                include products.jade
+                
+
+
+
+
+
+
+
+
+    footer.footer
+    script(src='bower/jquery/jquery.min.js')
+    script(src='bower/jquery-ui/jquery-ui.min.js')
+    script(src='bower/select2/select2.min.js')
+    script(src='js/main.js')

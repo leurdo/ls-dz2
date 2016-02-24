@@ -1,0 +1,122 @@
+.content {
+    @extend %clearfix;
+    width: 740px;
+    float: right;
+}
+
+.main {
+    margin-top: 20px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    font-family: open_sansbold;
+    font-size: 20px;
+}
+
+.cont-head {
+    @extend %clearfix;
+    @include grey-border();
+    background: #e1ecef;
+}
+
+.sorting {
+    float: left;
+    margin: 10px 0 10px 20px;
+
+    &__title {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    &__select {
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 1px rgba(149,149,149,.43);
+        border: solid 1px #eaeef0;
+        padding: 3px;
+        vertical-align: middle;
+    }
+}
+
+
+.select2-container--default .select2-selection--single {
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(149,149,149,.43);
+    border: solid 1px #eaeef0;
+    background: #fff;
+}
+
+.select2-selection__arrow {
+     @include sprite($select-arrow);
+     position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+.select2-container--open .select2-selection__arrow {
+    @include sprite($select-arraow-up);
+}
+
+.select-view {
+    float: right;
+
+    &__title {
+        display: inline-block;
+        margin: 15px 10px 15px 0;
+    }
+}
+
+.view {
+
+    display: block;
+    float: right;
+    font-size: 0;
+
+    &__item {
+        width: 50px;
+        height: 50px;
+        border-left: solid 1px $lightGrey;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+#full-view:before {
+    @include sprite($full-view);
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 17px;
+}
+
+#full-view:hover:before, #full-view.active:before {
+    @include sprite($full-view-hover);
+}
+
+#list-view:before {
+    @include sprite($list-view);
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 17px;
+}
+
+#list-view:hover:before, #list-view.active:before {
+    @include sprite($list-view-hover);
+}
+
+#thumb-view:before {
+    @include sprite($thumb-view);
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 17px;
+}
+
+#thumb-view:hover:before, #thumb-view.active:before {
+    @include sprite($thumb-view-hover);
+}

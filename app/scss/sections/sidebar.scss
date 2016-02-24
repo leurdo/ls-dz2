@@ -1,0 +1,202 @@
+.sidebar {
+    width: 330px;
+    float: left;
+}
+
+//Sidebar menu
+
+.sidebar-nav {
+    @include grey-border();
+
+    &__item {
+        border-bottom: solid 1px #dee2e5;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__link {
+        padding: 15px 30px;
+        display: block;
+
+        &:hover {
+            background: #d6e5eb;
+        }
+
+        &_active {
+            background: #d6e5eb;
+        }
+    }
+}
+
+//Product filters
+
+.filters {
+    @include grey-border();
+    margin-top: 40px;
+}
+
+.formblock {
+    @extend %clearfix;
+    border-bottom: solid 1px #dee2e5;
+    padding-bottom: 25px;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+}
+
+.fb-header {
+    display: block;
+    padding: 15px 25px;
+    font-family: open_sanssemibold;
+    font-size: 16px;
+    position: relative;
+
+    &:hover:before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        @include sprite($arrow);
+    }
+}
+
+.fb-body {
+    padding: 0 25px;
+}
+
+.fb-body__item {
+    margin-bottom: 15px;
+}
+
+//Checkboxes, radio-buttons
+
+.radio-input, .checkbox-input, .checkbox-block__item {
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+}
+    
+.radio-input + label:before {
+    @include sprite($radio);
+    content: '';
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    
+}
+
+.radio-input:hover + label:before {
+    @include sprite($radio-hover);
+}
+
+.radio-input:checked + label:before {
+    @include sprite($radio-active);
+}
+
+.checkbox-input + label:before {
+    @include sprite($checkbox);
+    content: '';
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    
+}
+
+.checkbox-input:hover + label:before {
+    @include sprite($checkbox-hover);
+}
+
+.checkbox-input:checked + label:before {
+    @include sprite($checkbox-active);
+}
+
+.fb-body__link {
+    color: #00b3ff;
+    text-decoration: underline;
+}
+
+.select-input {
+    width: 85px;
+    margin-left: 5px;
+    margin-right: 40px;
+    font-family: open_sanssemibold;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(149,149,149,.43);
+    border: solid 1px #eaeef0;
+    padding: 3px;
+
+    &_last {
+        margin-right: 0;
+    }
+}
+
+// Slider
+.ui-slider {
+    margin: 20px 0;
+    height: 5px;
+    background: #dee2e5;
+    border: none;
+    border-radius: 0; 
+    position: relative;
+    text-align: left;
+}
+
+.ui-widget-header {
+    background: $orange;
+    border-radius: 0; 
+    top: 0;
+    height: 100%;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.ui-slider-handle  {
+    @include sprite($marker);
+    border: 0;
+    position: absolute;
+    z-index: 2;
+    top: -.3em;
+    margin-left: -.6em;
+}
+
+//Color selection
+
+.checkbox-block {
+    font-size: 0;
+}
+
+$colors: #fff, #cdcdcd, #000, #002d53, #ff1100, #fff324, #ff9243, #78c479, 
+#00a7ff, #a670b0, #f879b0, #913d14;
+$i: 0;
+
+@each $color in $colors {
+    $i: $i + 1;
+    #color#{$i} + label:before {
+        content: '';
+        display: inline-block;
+        margin: 0 20px 20px 0;
+        background: $color;
+        border: 1px solid #dee2e5;
+        width: 37px;
+        height: 37px;
+        box-sizing: border-box;
+    }
+
+#color#{$i}:hover + label:before {
+    border: 1px solid $orange;
+}
+
+#color#{$i}:checked + label:before {
+    border: 2px solid $orange;
+}
+
+}
+
+
+

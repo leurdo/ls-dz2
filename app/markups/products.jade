@@ -1,0 +1,46 @@
+include data.jade
+
+    ul.products
+        -var dataCount = 0
+        while dataCount < data.length
+            li.product
+                .slider
+                    .slider__block
+                        img(src="#{data[dataCount].images.image1}", alt="")
+                    ul.slider__list
+                        li(class="slider__item active")
+                            img(class="slider__img" src="#{data[dataCount].images.image1}", alt="")
+                        li(class="slider__item")
+                            img(class="slider__img" src="#{data[dataCount].images.image2}", alt="")
+                        li(class="slider__item")
+                            img(class="slider__img" src="#{data[dataCount].images.image3}", alt="")
+                    .art Артикул
+                        span.art__index #{data[dataCount].art}
+                .description-block
+                    h3.product-title #{data[dataCount].title} 
+                    .description #{data[dataCount].description}
+                    ul.description_thumb 
+                        each value,key in data[dataCount].car
+                            li.row
+                                if !value
+                                    span &nbsp;
+                                else
+                                    span.row__left #{key}
+                                    span.row__right #{value} 
+                    
+                    .rating
+                        mixin stars(number)
+                            -var c = 0
+                            while c < 5
+                                -c++
+                                if c <= number
+                                    span.rating__star
+                                else
+                                    span.rating__star_empty
+                            span.rating__number #{number}
+                        +stars(data[dataCount].rating)
+                .price-block
+                    .price #{data[dataCount].price} &#8381;
+                    button.add-to-cart В корзину
+                    .in-stock В наличии
+            -dataCount++

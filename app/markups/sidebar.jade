@@ -1,0 +1,60 @@
+sidebar.sidebar
+                mixin sideNav(active)
+                    ul.sidebar-nav
+                        -var sidemenu = ['Флагманы', 'Бюджетная линейка']
+                        each item in sidemenu
+                            li.sidebar-nav__item
+                                if item == active
+                                    a(href="#" class="sidebar-nav__link sidebar-nav__link_active") #{item}
+                                else 
+                                    a(href="#" class="sidebar-nav__link") #{item} 
+                +sideNav('Бюджетная линейка')
+
+                form.filters
+                    .formblock
+                        h3.fb-header Наличие в магазинах
+                        .fb-body
+                            -var count = 1
+                            -var inputs = ['Во всех магазинах', 'В ближайшем ко мне магазине']
+                            each item in inputs 
+                                .fb-body__item
+                                    input(class="radio-input" type="radio" id="filter-#{count}" name="filter-1")
+                                    label(for="filter-#{count}") #{item}
+                                    -count++
+                    .formblock
+                        h3.fb-header Бренды
+                        .fb-body
+                            -var inputs = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
+                            each item in inputs 
+                                .fb-body__item
+                                    input(class="checkbox-input" type="checkbox" id="filter-#{count}" name="filter-2")
+                                    label(for="filter-#{count}") #{item}
+                                    -count++
+                            a(href="#", class="fb-body__link") Сбросить фильтр
+                    .formblock
+                        h3.fb-header Цена
+                        .fb-body
+                            label(for="amount1") От:
+                            input(type="text" id="amount1" data-min="0" class="select-input") 
+                            label(for="amount2") До:
+                            input(type="text" id="amount2" data-max="20000" class="select-input select-input_last")
+                            #slider-range
+                    .formblock
+                        h3.fb-header Цвет
+                        .fb-body.checkbox-block
+                            -var c = 0
+                            -var colors = ['белый', 'серый', 'черный', 'синий', 'красный', 'желтый', 'оранжевый', 'зеленый', 'голубой', 'фиолетовый', 'розовый', 'коричневый']
+                            each item in colors
+                                -c++
+                                input(class="checkbox-block__item" type="checkbox" id="color#{c}" name="color" title="#{item}")
+                                label(for="color#{c}")
+                    .formblock
+                        h3.fb-header Операционные системы
+                        .fb-body
+                            -var inputs = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
+                            each item in inputs 
+                                .fb-body__item
+                                    input(class="checkbox-input" type="checkbox" id="filter-#{count}" name="filter-3")
+                                    label(for="filter-#{count}") #{item}
+                                    -count++
+                            a(href="#", class="fb-body__link") Сбросить фильтр
