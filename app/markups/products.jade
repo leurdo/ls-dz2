@@ -30,13 +30,14 @@ include data.jade
                     
                     .rating
                         mixin stars(number)
-                            -var c = 0
-                            while c < 5
-                                -c++
-                                if c <= number
-                                    span.rating__star
-                                else
-                                    span.rating__star_empty
+                            .rating__stars
+                                -var c = 0
+                                while c < 5
+                                    -c++
+                                    if c <= number
+                                        span.rating__star
+                                    else
+                                        span.rating__star_empty
                             span.rating__number #{number}
                         +stars(data[dataCount].rating)
                 .price-block

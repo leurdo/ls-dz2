@@ -1,4 +1,4 @@
-sidebar.sidebar
+aside.sidebar
                 mixin sideNav(active)
                     ul.sidebar-nav
                         -var sidemenu = ['Флагманы', 'Бюджетная линейка']
@@ -18,8 +18,12 @@ sidebar.sidebar
                             -var inputs = ['Во всех магазинах', 'В ближайшем ко мне магазине']
                             each item in inputs 
                                 .fb-body__item
-                                    input(class="radio-input" type="radio" id="filter-#{count}" name="filter-1")
-                                    label(for="filter-#{count}") #{item}
+                                    if count == 1 
+                                        input(class="radio-input" type="radio" id="filter-#{count}" name="filter-1" checked)
+                                        label(for="filter-#{count}") #{item}
+                                    else 
+                                        input(class="radio-input" type="radio" id="filter-#{count}" name="filter-1")
+                                        label(for="filter-#{count}") #{item}
                                     -count++
                     .formblock
                         h3.fb-header Бренды

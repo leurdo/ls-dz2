@@ -33,10 +33,10 @@ header.header
                     -var nav = ['Планшеты', 'Мобильные телефоны', 'Мр3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
                     each item in nav
                         li.nav__item
-                        if item == 'Мобильные телефоны'
-                            a(href="#" class="nav__link nav__link_active") #{item}
-                        else
-                            a(href="#" class="nav__link") #{item}
+                            if item == 'Мобильные телефоны'
+                                a(href="#" class="nav__link nav__link_active") #{item}
+                            else
+                                a(href="#" class="nav__link") #{item}
 
             ul.breadcrumbs.container
                 - var crumbs = ['Главная', 'Каталог']

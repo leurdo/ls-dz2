@@ -1,18 +1,13 @@
 
 (function() {
 
-    publicMethod();
     init();
     attachEvents();
 
     function init() {
-      $(function(){
-
         priceSelect();
         initSelect2();
         columnize();
-
-        });
     };
 
     function attachEvents() {
@@ -23,11 +18,10 @@
     };
 
     function priceSelect() {
-        var 
-          min = parseInt($('#amount1').attr('data-min')),
-          max = parseInt($('#amount2').attr('data-max')),
-          val1 = min,
-          val2 = max;
+        var min = parseInt($('#amount1').attr('data-min')),
+            max = parseInt($('#amount2').attr('data-max')),
+            val1 = min,
+            val2 = max;
 
         $('#slider-range').slider({
           range: true,
@@ -48,10 +42,10 @@
             
             if (parseInt(val1) > parseInt(val2)) {
               val1 = val2;
-            }
+            };
             if (parseInt(val1) < min || val1 == '') {
               val1 = min;
-            }
+            };
             
             $(this).val(val1);
 
@@ -82,10 +76,10 @@
 
     function onImageSlider(e) {
           e.preventDefault();
-          var
-          $this = $(this),
-          block = $this.closest('.slider').find('.slider__block'),
-          path = $this.find('img').attr('src');
+
+          var $this = $(this),
+              block = $this.closest('.slider').find('.slider__block'),
+              path = $this.find('img').attr('src');
 
           if (!$this.hasClass('active')) {
             $this.addClass('active');
@@ -102,10 +96,10 @@
 
     function onChangeView(e) {
       e.preventDefault();
-      var
-      $this = $(this),
-      viewClass = $this.attr('id'),
-      currentClass = $this.siblings('.active').attr('id');
+
+      var $this = $(this),
+          viewClass = $this.attr('id'),
+          currentClass = $this.siblings('.active').attr('id');
 
       if (!$this.hasClass('active')) {
 
@@ -120,16 +114,16 @@
 
     function onClearInputs(e) {
       e.preventDefault();
-      var
-      $this = $(this);
+
+      var $this = $(this);
 
       $this.closest('.fb-body').find('input').removeAttr('checked');
     };
 
     function onCloseBlocks(e) {
       e.preventDefault();
-      var
-      $this = $(this);
+
+      var $this = $(this);
 
       $this.closest('.formblock').find('.fb-body').slideToggle();
       $this.toggleClass('fb-header_closed')
@@ -139,7 +133,5 @@
       $('.information__p').addClass('dontsplit');
       $('.information__text').columnize({ columns: 2, lastNeverTallest: true });
     };
-
-    function publicMethod() {};
 
 })();

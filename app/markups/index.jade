@@ -1,78 +1,94 @@
-include head.jade
-body
-    .wrapper
-        include header.jade
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        title Cooltech - Мобильные телефоны
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport" content="width=device-width")
+        meta(name='description', content='')
+        meta(name='keywords', content='')
+        meta(name='author', content='')
+        link(rel='apple-touch-icon', sizes='57x57', href='/apple-touch-icon-57x57.png')
+        link(rel='apple-touch-icon', sizes='60x60', href='/apple-touch-icon-60x60.png')
+        link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
+        link(rel='icon', type='image/png', href='/favicon-16x16.png', sizes='16x16')
+        link(rel='stylesheet', href='bower/normalize-css/normalize.css')
+        link(rel='stylesheet', href='bower/select2/select2.css')
+        link(rel='stylesheet', href='css/main.css')
+    body
+        .wrapper
+            include header.jade
 
-        main.main.container
-            h2.page-title Мобильные телефоны
-            include sidebar.jade
+            main.main.container
+                h2.page-title Мобильные телефоны
+                include sidebar.jade
 
-            .content
-                .cont-head
-                    .sorting 
-                        .sorting__title Сортировать по
-                        select(class="sorting__select")
-                            option(value="price") по цене
-                            option(value="popularity") по популярности
-                    .select-view
-                        .select-view__title Вид каталога
-                        ul.view
-                            -var view = ['full-view', 'thumb-view', 'list-view']
-                            each item in view
-                                if item == 'full-view'
-                                    li(id="#{item}").view__item.active
-                                else
-                                    li(id="#{item}").view__item
-                include products.jade
+                .content
+                    .cont-head
+                        .sorting 
+                            .sorting__title Сортировать по
+                            select(class="sorting__select")
+                                option(value="price") по цене
+                                option(value="popularity") по популярности
+                        .select-view
+                            .select-view__title Вид каталога
+                            ul.view
+                                -var view = ['full-view', 'thumb-view', 'list-view']
+                                each item in view
+                                    if item == 'full-view'
+                                        li(id="#{item}").view__item.active
+                                    else
+                                        li(id="#{item}").view__item
+                    include products.jade
 
-                ul.pagination
-                    li.pagination__item <
-                    -var p = 0
-                    while p < 3
-                        -p++
-                        if p == 1
-                            li.pagination__item.pagination__item_active #{p}
-                        else
-                            li.pagination__item #{p}
-                    li.pagination__item >
-
-        .container.information
-            h3.information__title Важная информация
-            .information__text
-                -p = 0
-                -var num
-                while p < 4
-                    -p++
-                    -num = p % 2
-                    p.information__p #{paragraph[num]}
-
-
-    footer.footer
-        .container.footer-inner
-            .footer-info
-                .footer-logo
-                    a(href="/")
-                        img(src="images/logo-footer.png", alt="logo")
-                .footer-socials
-                    ul.footer-socials__list
-                                each item in socials
-                                    li.footer-socials__item
-                                        a(href="#" class="footer-socials__link footer-socials__link_#{item}") #{item}
-            nav.footer-nav
-                ul.footer-nav-inner
-                    each item in nav
-                        li.footer-nav__item
-                            if item == 'Мобильные телефоны'
-                                a(href="#" class="footer-nav__link footer-nav__link_active") #{item}
+                    ul.pagination
+                        li.pagination__item &lt;
+                        -var p = 0
+                        while p < 3
+                            -p++
+                            if p == 1
+                                li.pagination__item.pagination__item_active #{p}
                             else
-                                a(href="#" class="footer-nav__link") #{item}
-        .footer-copyright All rights reserved. 2015. no copy alowed
+                                li.pagination__item #{p}
+                        li.pagination__item &lt;
+
+            .container.information
+                h3.information__title Важная информация
+                .information__text
+                    -p = 0
+                    -var num
+                    while p < 4
+                        -p++
+                        -num = p % 2
+                        p.information__p #{paragraph[num]}
+
+
+        footer.footer
+            .container.footer-inner
+                .footer-info
+                    .footer-logo
+                        a(href="/")
+                            img(src="images/logo-footer.png", alt="logo")
+                    .footer-socials
+                        ul.footer-socials__list
+                                    each item in socials
+                                        li.footer-socials__item
+                                            a(href="#" class="footer-socials__link footer-socials__link_#{item}") #{item}
+                nav.footer-nav
+                    ul.footer-nav-inner
+                        each item in nav
+                            li.footer-nav__item
+                                if item == 'Мобильные телефоны'
+                                    a(href="#" class="footer-nav__link footer-nav__link_active") #{item}
+                                else
+                                    a(href="#" class="footer-nav__link") #{item}
+            .footer-copyright All rights reserved. 2015. no copy alowed
 
 
 
 
-    script(src='bower/jquery/jquery.min.js')
-    script(src='bower/jquery-ui/jquery-ui.min.js')
-    script(src='bower/select2/select2.min.js')
-    script(src='bower/columnizer/jquery.columnizer.js')
-    script(src='js/main.js')
+        script(src='bower/jquery/jquery.min.js')
+        script(src='bower/jquery-ui/jquery-ui.min.js')
+        script(src='bower/select2/select2.min.js')
+        script(src='bower/columnizer/jquery.columnizer.js')
+        script(src='js/main.js')
