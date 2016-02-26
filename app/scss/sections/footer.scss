@@ -1,0 +1,78 @@
+.footer {
+    min-width: $siteWidth;
+    background: url('../images/footer-bg.png') 0 0 repeat;
+    padding-top: 30px;
+
+    &-inner {
+        padding-bottom: 10px;
+
+    }
+
+    &-info {
+        @extend %clearfix;
+    }
+
+    &-socials {
+        float: right;
+
+        &__item {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 15px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+
+    }
+
+    &-logo {
+        float: left;
+        margin-top: 40px;
+    }
+
+    &-nav {
+        @extend %clearfix;
+
+        &-inner {
+            display: block;
+            width: 550px;
+            float: right;
+            text-align: right;
+        }
+        
+
+        &__item {
+            display: inline-block;
+            margin-left: 20px;
+            padding-bottom: 15px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        &__link {
+            color: #fff;
+            text-decoration: underline;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    &-copyright {
+        width: 100%;
+        min-width: 1100px;
+        border-top: 1px solid #474747;
+        text-align: center;
+        color: #fff;
+        padding: 5px 0;
+    }
+}

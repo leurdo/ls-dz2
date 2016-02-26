@@ -40,7 +40,6 @@
 .formblock {
     @extend %clearfix;
     border-bottom: solid 1px #dee2e5;
-    padding-bottom: 25px;
         
         &:last-child {
             border-bottom: none;
@@ -53,6 +52,7 @@
     font-family: open_sanssemibold;
     font-size: 16px;
     position: relative;
+    cursor: pointer;
 
     &:hover:before {
         content: "";
@@ -61,10 +61,30 @@
         top: 20px;
         @include sprite($arrow);
     }
+
+    &_closed:before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        @include sprite($arrow-down);
+    }
+
+    &_closed:hover {
+        background: #d6e5eb;
+    }
+
+    &_closed:hover:before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        @include sprite($arrow-down);
+    }
 }
 
 .fb-body {
-    padding: 0 25px;
+    padding: 10px 25px 25px 25px;
 }
 
 .fb-body__item {
@@ -77,6 +97,7 @@
   opacity: 0;
   cursor: pointer;
   width: 0;
+  position: absolute;
 }
     
 .radio-input + label:before {

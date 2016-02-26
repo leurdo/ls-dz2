@@ -28,6 +28,33 @@
     }
 }
 
+.footer-socials__link_vk {
+    @include sprite($vk-footer);
+    @include hide-text;
+
+    &:hover {
+        @include sprite($vk-footer-hover);
+    }
+}
+
+.footer-socials__link_fb {
+    @include sprite($fb-footer);
+    @include hide-text;
+
+    &:hover {
+        @include sprite($fb-footer-hover);
+    }
+}
+
+.footer-socials__link_tw {
+    @include sprite($tw-footer);
+    @include hide-text;
+
+    &:hover {
+        @include sprite($tw-footer-hover);
+    }
+}
+
 
 .icon-address {
     @include sprite($map);
