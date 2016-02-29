@@ -34,10 +34,17 @@
     &-logo {
         float: left;
         margin-top: 40px;
+        width: 50%;
+
+        &__link {
+            display: block;
+        }
     }
 
     &-nav {
-        @extend %clearfix;
+        float: right;
+        margin-top: 35px;
+
 
         &-inner {
             display: block;

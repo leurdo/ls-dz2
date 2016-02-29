@@ -130,7 +130,7 @@
     };
 
     function columnize() {
-      $('.information__p').addClass('dontsplit');
+      $('.information__text p').addClass('dontsplit');
       $('.information__text').columnize({ columns: 2, lastNeverTallest: true });
     };
 

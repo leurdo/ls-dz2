@@ -4,7 +4,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         title Cooltech - Мобильные телефоны
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport" content="width=device-width")
+        meta(name="viewport" content="width=1100")
         meta(name='description', content='')
         meta(name='keywords', content='')
         meta(name='author', content='')
@@ -60,20 +60,20 @@ html(lang="ru")
                     while p < 4
                         -p++
                         -num = p % 2
-                        p.information__p #{paragraph[num]}
+                        p #{paragraph[num]}
 
 
         footer.footer
             .container.footer-inner
-                .footer-info
-                    .footer-logo
-                        a(href="/")
-                            img(src="images/logo-footer.png", alt="logo")
-                    .footer-socials
-                        ul.footer-socials__list
-                                    each item in socials
-                                        li.footer-socials__item
-                                            a(href="#" class="footer-socials__link footer-socials__link_#{item}") #{item}
+                
+                .footer-logo
+                    a.footer-logo__link(href="/")
+                        img(src="images/logo-footer.png", alt="logo")
+                .footer-socials
+                    ul.footer-socials__list
+                                each item in socials
+                                    li.footer-socials__item
+                                        a(href="#" class="footer-socials__link footer-socials__link_#{item}") #{item}
                 nav.footer-nav
                     ul.footer-nav-inner
                         each item in nav

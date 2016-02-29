@@ -49,6 +49,10 @@
     vertical-align: middle;
     width: 1%;
     font-size: 0;
+
+    &__link {
+        display: block;
+    }
 }
 
 .search {

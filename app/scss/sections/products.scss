@@ -33,6 +33,11 @@
     margin-bottom: 15px;
 }
 
+.sliderblock__img {
+    max-width: 135px;
+    max-height: 135px;
+}
+
 .slider__list {
     font-size: 0;
 }
@@ -53,8 +58,8 @@
 }
 
 .slider__img {
-    width: 35px;
-    height: 35px;
+    max-width: 35px;
+    max-height: 35px;
 }
 
 .art {
@@ -127,12 +132,18 @@
     width: 150-25px;
     border-left: 1px solid $lightGrey;
     text-align: right;
+    position: relative;
 }
 
 .price {
     font-family: open_sanssemibold;
     font-size: 20px;
-    margin-bottom: 130px;
+}
+
+.price__footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .add-to-cart {

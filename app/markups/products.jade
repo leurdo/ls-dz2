@@ -6,7 +6,7 @@ include data.jade
             li.product
                 .slider
                     .slider__block
-                        img(src="#{data[dataCount].images.image1}", alt="")
+                        img(class="sliderblock__img" src="#{data[dataCount].images.image1}", alt="")
                     ul.slider__list
                         li(class="slider__item active")
                             img(class="slider__img" src="#{data[dataCount].images.image1}", alt="")
@@ -42,6 +42,7 @@ include data.jade
                         +stars(data[dataCount].rating)
                 .price-block
                     .price #{data[dataCount].price} &#8381;
-                    button.add-to-cart В корзину
-                    .in-stock В наличии
+                    .price__footer
+                        button.add-to-cart В корзину
+                        .in-stock В наличии
             -dataCount++
